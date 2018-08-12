@@ -1,0 +1,74 @@
+
+                        EXPLORING CONDITIONALS AND LOGIC STATEMENTS
+Eploring terinary operators
+var output = document.getElementById("output");
+var login = true;
+var outputHolder = "";
+var userOkay = login == true? outputHolder = "true":outputHolder = "false";
+output.innerHTML = userOkay;
+
+   
+ In these other Code we are checking if a userName is present in the array and then print greeting on the web page
+
+var userName = ["Dotun","Segun","Micheal","Sola","Deborah","Alyson",];
+var collectUser = prompt("Enter username");
+var checkUserName = userName.indexOf(collectUser)> -1 ? true : false;
+var output = document.getElementById("output");
+output.innerHTML = checkUserName? "welcome":"Denied";
+  
+
+in These Code we are if the userName is present with Array using Array.includes
+
+var userName = ["Dotun","Segun","Micheal","Sola","Deborah","Alyson",];
+var inputName = prompt("Type in User Name");
+var checkUser = userName.includes(inputName);
+document.getElementById("output").innerHTML = checkUser? 'welcome':'Access Denied';
+ 
+This code is just like first Username code
+var userName = ["Dotun","Segun","Micheal","Sola","Deborah","Alyson",];
+var inputUser = prompt('input user name');
+var checkUser = userName.indexOf(inputUser) ;
+var validator = (checkUser > -1)? true : false;
+
+
+                                   EXPLORING CONDITIONALS WITH IF STATEMENT
+
+var userName = ["Dotun","Segun","Micheal","Sola","Deborah","Alyson",];
+var inputUser = prompt('input user name');
+var checkUser = userName.indexOf(inputUser) ;
+var validator = (checkUser > -1)? true : false;
+if(validator === true){
+output.innerHTML = 'WELCOME IT WAS TRUE';
+}else{
+output.innerHTML = 'ACCESS DENIED TRY AGAIN';
+};
+document.getElementById('output').innerHTML = validator? 'welcome' : 'Access Denied';
+
+                                    
+
+                                           STILL EXPLORING
+ In these code we explored the power of conditionals to the next level
+I was able to build a code that can check for names in array and then generate an antomatic
+response with the age calculated, check in out and see.
+
+var userName = ["Dotun","Segun","Micheal","Sola","Deborah","Alyson",];
+var name = prompt('Type in your name');
+var x = prompt('enter your age');
+var age = Number(x);
+var ageCalc = 18 - age;
+var ageTer = (ageCalc > 1)? ageCalc + ' more years' : 1 + ' more year';
+var checkUser = userName.indexOf(name);
+var htmlPut = '';
+if (checkUser > -1){
+alert('WELCOME ' + name);
+htmlPut = 'Thanks for Showing up ';
+htmlPut += (age >= 18)? 'you can proceed ' + name : ' but sorry you are Under aged wait for ' + ageTer;
+}else{
+alert('Sorry you not present on the list');
+htmlPut ='Try and sign up to become a member ';
+htmlPut += (age >= 18)? ' since you above 18 you can register' : ' you are below 18 so wait for ' + ageTer;
+};
+var output = document.getElementById('output');
+output.innerHTML = htmlPut;
+
+
