@@ -70,5 +70,83 @@ htmlPut += (age >= 18)? ' since you above 18 you can register' : ' you are below
 };
 var output = document.getElementById('output');
 output.innerHTML = htmlPut;
+  
 
 
+           EXPLORING THE IF ELSE STATEMENT
+  var myTime = prompt("what hour is it?");
+        
+        var output = document.getElementById("output");
+        
+        if(myTime >= 8 && myTime < 12) {
+            output.innerHTML = "Wake up its morning";
+        } else if (myTime >= 12 && myTime < 13) {
+            output.innerHTML = "go to Lunch";
+        } else if (myTime >= 13 && myTime <= 16) {
+            output.innerHTML = "Go to work";
+        } else if (myTime >16 && myTime < 20) {
+            output.innerHTML = "Dinner Time";
+        } else if (myTime >= 22) {
+            output.innerHTML = "Time to go to sleep";
+        } else {
+           output.innerHTML = "You should be sleeping";
+        }
+
+
+ 
+IN THESE OTHER CODE HERE WE DESIGNED A FLIPP COIN GAME WITH IF STATEMENT
+
+                      MY PROTOTYPE
+
+var coin = ['Head', 'Tail',];
+var guess = prompt('Head or Tail');
+var promptIndex = coin.indexOf(guess);
+var random = Math.floor(Math.random() * coin.length);
+if(promptIndex == random){
+document.getElementById('output').innerHTML = 'you are right the answer is ' +  coin[random];
+}else{
+document.getElementById('output').innerHTML =  'you are wrong the answer is ' +  coin[random];
+};
+
+     
+                  My teachers prototype.
+
+/*var html = "something went wrong";
+        var output = document.getElementById("output");
+        var question = prompt("heads or tails");
+        var result = question == "heads" ? 1 : 0;
+        var randomNumber = Math.floor(Math.random()*2);
+        if(result == randomNumber) {
+            html = "yes guessed correctly";
+        }else{
+            html = "you were wrong";        
+        }
+        output.innerHTML = html;*/
+
+//ask a question
+//random number for random response
+//use switch to create some random responses
+//output the response back with the question
+var question = prompt('Ask your Question ');
+var answer = 'something went wrong';
+var random = Math.floor(Math.random() * 10);
+switch(random){
+    case 0:
+	    answer = 'yes it is possible';
+		break;
+	case 1:
+	    answer = 'no, it is not possible';
+		break;
+	case 2:
+	    answer = 'probably';
+		break;
+	case 3:
+	    answer = 'Better Luck next time';
+		break;
+	case 4:
+	    answer = 'Good luck with your life'
+		break;
+	default:
+	answer = 'you are completely of the tangent';
+};
+output.innerHTML = 'your question was ' + '" ' + question + ' "'+ ' But my answer is ' + answer; 
